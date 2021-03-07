@@ -1,5 +1,6 @@
 from selenium import webdriver
 import time
+import os
 
 
 class ChromeDriverMac():
@@ -11,7 +12,9 @@ class ChromeDriverMac():
         # Open the privded URL
         driver.get('http://www.google.com/')
         time.sleep(5)
+        # Select Search Box
         search_box = driver.find_element_by_name('q')
+        # Type ChromeDriver in the search box.
         search_box.send_keys('ChromeDriver')
         search_box.submit()
         time.sleep(5)
@@ -20,3 +23,16 @@ class ChromeDriverMac():
 
 cc = ChromeDriverMac()
 cc.test()
+
+
+class SafariDriverMac():
+
+    def test(self):
+        driver = webdriver.Safari()
+        driver.get('http://www.google.com/')
+        time.sleep(5)
+        driver.quit()
+
+
+sf = SafariDriverMac()
+sf.test()
