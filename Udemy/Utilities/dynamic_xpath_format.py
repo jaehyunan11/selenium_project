@@ -22,7 +22,7 @@ class DynamicXPathFormat():
         time.sleep(3)
         password = driver.find_element(By.ID, "user_password")
         time.sleep(3)
-        password.send_keys("jaeHYUN^^48625")
+        password.send_keys("password")
         time.sleep(3)
         driver.find_element(By.NAME, "commit").click()
 
